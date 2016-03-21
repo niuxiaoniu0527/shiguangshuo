@@ -136,6 +136,18 @@
 		09AAD10A1C9C205F007AE732 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AAD1091C9C205F007AE732 /* LoginViewController.m */; };
 		09AAD10D1C9C20CA007AE732 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AAD10C1C9C20CA007AE732 /* HomeTableViewController.m */; };
 		09AAD1101C9C222D007AE732 /* PublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AAD10F1C9C222D007AE732 /* PublicViewController.m */; };
+		09B1EC9A1C9FE4CA001E4808 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B1EC991C9FE4CA001E4808 /* UIImage+ImageEffects.m */; };
+		09B1EC9E1C9FE532001E4808 /* login_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B1EC9D1C9FE532001E4808 /* login_bg.png */; };
+		09B1ECA01C9FE5FC001E4808 /* user_43px.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B1EC9F1C9FE5FC001E4808 /* user_43px.png */; };
+		09B1ECA21C9FE602001E4808 /* Password_48px.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B1ECA11C9FE602001E4808 /* Password_48px.png */; };
+		09B1ECA81C9FF89F001E4808 /* Kaiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09B1ECA71C9FF89F001E4808 /* Kaiti.ttf */; };
+		09B1ECAC1CA006AA001E4808 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B1ECAB1CA006AA001E4808 /* header.png */; };
+		09B1ECB81CA0160D001E4808 /* wechat_32px.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B1ECB51CA0160D001E4808 /* wechat_32px.png */; };
+		09B1ECB91CA0160D001E4808 /* sina_weibo_32px.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B1ECB61CA0160D001E4808 /* sina_weibo_32px.png */; };
+		09B1ECBA1CA0160D001E4808 /* qq_32px.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B1ECB71CA0160D001E4808 /* qq_32px.png */; };
+		09B1ECBC1CA01AB3001E4808 /* regiest_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B1ECBB1CA01AB3001E4808 /* regiest_bg.png */; };
+		09B1ECC01CA01B2F001E4808 /* RegiestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B1ECBF1CA01B2F001E4808 /* RegiestViewController.m */; };
+		09B1ECC21CA01C5B001E4808 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B1ECC11CA01C5B001E4808 /* 5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -278,6 +290,20 @@
 		09AAD10C1C9C20CA007AE732 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		09AAD10E1C9C222D007AE732 /* PublicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicViewController.h; sourceTree = "<group>"; };
 		09AAD10F1C9C222D007AE732 /* PublicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicViewController.m; sourceTree = "<group>"; };
+		09B1EC981C9FE4CA001E4808 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		09B1EC991C9FE4CA001E4808 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		09B1EC9D1C9FE532001E4808 /* login_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_bg.png; sourceTree = "<group>"; };
+		09B1EC9F1C9FE5FC001E4808 /* user_43px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_43px.png; sourceTree = "<group>"; };
+		09B1ECA11C9FE602001E4808 /* Password_48px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Password_48px.png; sourceTree = "<group>"; };
+		09B1ECA71C9FF89F001E4808 /* Kaiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kaiti.ttf; sourceTree = "<group>"; };
+		09B1ECAB1CA006AA001E4808 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		09B1ECB51CA0160D001E4808 /* wechat_32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat_32px.png; sourceTree = "<group>"; };
+		09B1ECB61CA0160D001E4808 /* sina_weibo_32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sina_weibo_32px.png; sourceTree = "<group>"; };
+		09B1ECB71CA0160D001E4808 /* qq_32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq_32px.png; sourceTree = "<group>"; };
+		09B1ECBB1CA01AB3001E4808 /* regiest_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = regiest_bg.png; sourceTree = "<group>"; };
+		09B1ECBE1CA01B2F001E4808 /* RegiestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegiestViewController.h; sourceTree = "<group>"; };
+		09B1ECBF1CA01B2F001E4808 /* RegiestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegiestViewController.m; sourceTree = "<group>"; };
+		09B1ECC11CA01C5B001E4808 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +344,7 @@
 				09AAD1021C9BFA4C007AE732 /* Add */,
 				09AAB3A21C9B8F6D007AE732 /* Message */,
 				09AAB3A31C9B8F7B007AE732 /* Mine */,
+				09B1ECA61C9FF888001E4808 /* resource */,
 				09AAD1071C9C2018007AE732 /* FrameWork */,
 				09AAB3A61C9B9620007AE732 /* Images */,
 				09AAB39C1C9B8E06007AE732 /* APP */,
@@ -400,6 +427,15 @@
 		09AAB3A61C9B9620007AE732 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				09B1ECC11CA01C5B001E4808 /* 5.png */,
+				09B1ECBB1CA01AB3001E4808 /* regiest_bg.png */,
+				09B1ECB51CA0160D001E4808 /* wechat_32px.png */,
+				09B1ECB61CA0160D001E4808 /* sina_weibo_32px.png */,
+				09B1ECB71CA0160D001E4808 /* qq_32px.png */,
+				09B1ECAB1CA006AA001E4808 /* header.png */,
+				09B1ECA11C9FE602001E4808 /* Password_48px.png */,
+				09B1EC9F1C9FE5FC001E4808 /* user_43px.png */,
+				09B1EC9D1C9FE532001E4808 /* login_bg.png */,
 				09AAD1001C9BF823007AE732 /* album@2x.png */,
 				09AAD0DC1C9BE98F007AE732 /* Home.png */,
 				09AAD0DA1C9BE8EA007AE732 /* zhoubian.png */,
@@ -561,6 +597,7 @@
 			children = (
 				09AAD1081C9C205F007AE732 /* LoginViewController.h */,
 				09AAD1091C9C205F007AE732 /* LoginViewController.m */,
+				09B1ECBD1CA01B0E001E4808 /* Regiest */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -568,8 +605,36 @@
 		09AAD1071C9C2018007AE732 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				09B1EC971C9FE4CA001E4808 /* UIImage+ImageEffects */,
 			);
 			path = FrameWork;
+			sourceTree = "<group>";
+		};
+		09B1EC971C9FE4CA001E4808 /* UIImage+ImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				09B1EC981C9FE4CA001E4808 /* UIImage+ImageEffects.h */,
+				09B1EC991C9FE4CA001E4808 /* UIImage+ImageEffects.m */,
+			);
+			path = "UIImage+ImageEffects";
+			sourceTree = "<group>";
+		};
+		09B1ECA61C9FF888001E4808 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				09B1ECA71C9FF89F001E4808 /* Kaiti.ttf */,
+			);
+			name = resource;
+			path = FrameWork;
+			sourceTree = "<group>";
+		};
+		09B1ECBD1CA01B0E001E4808 /* Regiest */ = {
+			isa = PBXGroup;
+			children = (
+				09B1ECBE1CA01B2F001E4808 /* RegiestViewController.h */,
+				09B1ECBF1CA01B2F001E4808 /* RegiestViewController.m */,
+			);
+			name = Regiest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,6 +698,7 @@
 				09AAD0DD1C9BE98F007AE732 /* Home.png in Resources */,
 				09AAB4EC1C9BA563007AE732 /* contacts_findfriends_icon@2x.png in Resources */,
 				09AAB4C71C9BA563007AE732 /* camera_video_background@3x.png in Resources */,
+				09B1ECBA1CA0160D001E4808 /* qq_32px.png in Resources */,
 				09AAB5201C9BA563007AE732 /* tabbar_message_center_highlighted@3x.png in Resources */,
 				09AAB4E41C9BA563007AE732 /* common_praise_light_selected@2x.png in Resources */,
 				09AAB4FA1C9BA563007AE732 /* navigationbar_search@3x.png in Resources */,
@@ -643,7 +709,9 @@
 				09AAB5191C9BA563007AE732 /* tabbar_home_highlighted@2x.png in Resources */,
 				09AAB4F31C9BA563007AE732 /* messagescenter_good@2x.png in Resources */,
 				09AAB5091C9BA563007AE732 /* surprise_toolbar_picture_highlighted@2x.png in Resources */,
+				09B1ECA81C9FF89F001E4808 /* Kaiti.ttf in Resources */,
 				09AAB4D31C9BA563007AE732 /* common_button_big_red@2x.png in Resources */,
+				09B1ECB81CA0160D001E4808 /* wechat_32px.png in Resources */,
 				09AAB4FC1C9BA563007AE732 /* navigationbar_search_highlighted@3x.png in Resources */,
 				09AAB4C81C9BA563007AE732 /* camera_video_background_highlighted@2x.png in Resources */,
 				09AAB4F51C9BA563007AE732 /* more_icon_back@2x.png in Resources */,
@@ -653,8 +721,10 @@
 				09AAB4E01C9BA563007AE732 /* common_button_sort_edit@2x.png in Resources */,
 				09AAB51E1C9BA563007AE732 /* tabbar_message_center@3x.png in Resources */,
 				09AAB5101C9BA563007AE732 /* tabbar_compose_icon_add_highlighted@3x.png in Resources */,
+				09B1ECAC1CA006AA001E4808 /* header.png in Resources */,
 				09AAB4E11C9BA563007AE732 /* common_button_sort_edit@3x.png in Resources */,
 				09AAD0DF1C9BE9ED007AE732 /* add.png in Resources */,
+				09B1EC9E1C9FE532001E4808 /* login_bg.png in Resources */,
 				09AAB5271C9BA563007AE732 /* tabbar_profile_selected@2x.png in Resources */,
 				09AAB4D81C9BA563007AE732 /* common_button_blue@2x.png in Resources */,
 				09AAD0FA1C9BF54A007AE732 /* tabbar_compose_photo@2x.png in Resources */,
@@ -690,9 +760,11 @@
 				09AAB4F61C9BA563007AE732 /* more_icon_back@3x.png in Resources */,
 				09AAB4DB1C9BA563007AE732 /* common_button_green_disable@2x.png in Resources */,
 				09AAB4D41C9BA563007AE732 /* common_button_big_red_highlighted@2x.png in Resources */,
+				09B1ECC21CA01C5B001E4808 /* 5.png in Resources */,
 				09AAB4F41C9BA563007AE732 /* messagescenter_good@3x.png in Resources */,
 				09AAB52F1C9BA65D007AE732 /* tabbar_compose_button@2x.png in Resources */,
 				09AAB5241C9BA563007AE732 /* tabbar_profile@3x.png in Resources */,
+				09B1ECBC1CA01AB3001E4808 /* regiest_bg.png in Resources */,
 				09AAB51C1C9BA563007AE732 /* tabbar_home_selected@3x.png in Resources */,
 				09AAB50D1C9BA563007AE732 /* tabbar_compose_camera@2x.png in Resources */,
 				09AAB4C61C9BA563007AE732 /* camera_video_background@2x.png in Resources */,
@@ -708,6 +780,7 @@
 				09AAB5251C9BA563007AE732 /* tabbar_profile_highlighted@2x.png in Resources */,
 				09AAB4E21C9BA563007AE732 /* common_button_sort_edit_highlighted@2x.png in Resources */,
 				09AAB4FE1C9BA563007AE732 /* navigationbar_search_light@3x.png in Resources */,
+				09B1ECB91CA0160D001E4808 /* sina_weibo_32px.png in Resources */,
 				09AAD0E31C9BEB46007AE732 /* Mine.plist in Resources */,
 				09AAD0FF1C9BF78E007AE732 /* message_more_pic@3x.png in Resources */,
 				09AAB5051C9BA563007AE732 /* surprise_picturebutton_highlighted@2x.png in Resources */,
@@ -719,6 +792,7 @@
 				09AAB5181C9BA563007AE732 /* tabbar_home@3x.png in Resources */,
 				09AAD0F61C9BF43F007AE732 /* message_icon_group@2x.png in Resources */,
 				09AAB4DF1C9BA563007AE732 /* common_button_orange_highlighted@2x.png in Resources */,
+				09B1ECA01C9FE5FC001E4808 /* user_43px.png in Resources */,
 				09AAB4FD1C9BA563007AE732 /* navigationbar_search_light@2x.png in Resources */,
 				09AAB5081C9BA563007AE732 /* surprise_toolbar_picture@3x.png in Resources */,
 				09AAB5211C9BA563007AE732 /* tabbar_message_center_selected@2x.png in Resources */,
@@ -742,6 +816,7 @@
 				09AAB4E81C9BA563007AE732 /* compose_camerabutton_background@2x.png in Resources */,
 				09AAB4DE1C9BA563007AE732 /* common_button_orange_disable@2x.png in Resources */,
 				09AAB4E61C9BA563007AE732 /* common_share_light@2x.png in Resources */,
+				09B1ECA21C9FE602001E4808 /* Password_48px.png in Resources */,
 				09AAB3901C9B8DEF007AE732 /* Main.storyboard in Resources */,
 				09AAB4E31C9BA563007AE732 /* common_button_sort_edit_highlighted@3x.png in Resources */,
 				09AAB4E51C9BA563007AE732 /* common_praise_light_selected@3x.png in Resources */,
@@ -766,6 +841,8 @@
 				09AAD10A1C9C205F007AE732 /* LoginViewController.m in Sources */,
 				09AAD10D1C9C20CA007AE732 /* HomeTableViewController.m in Sources */,
 				09AAB38A1C9B8DEF007AE732 /* AppDelegate.m in Sources */,
+				09B1EC9A1C9FE4CA001E4808 /* UIImage+ImageEffects.m in Sources */,
+				09B1ECC01CA01B2F001E4808 /* RegiestViewController.m in Sources */,
 				09AAD0EB1C9BEBDD007AE732 /* RequestMine.m in Sources */,
 				09AAB3871C9B8DEF007AE732 /* main.m in Sources */,
 				09AAD1101C9C222D007AE732 /* PublicViewController.m in Sources */,

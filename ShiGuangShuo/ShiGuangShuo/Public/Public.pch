@@ -5,3 +5,4 @@
 //  
 //
 //
+#define kScreenWidth self.view.frame.size.width
