@@ -34,7 +34,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.arr.count;
+    return self.arr.count + 1;
 }
 
 
@@ -44,15 +44,29 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
-    cell.textLabel.text = self.arr[indexPath.row];
-    if (indexPath.row == 1) {
-        cell.imageView.image = [UIImage imageNamed:@"album"];
-    }else{
+    if (indexPath.row == 0) {
+#warning 用户名这块需要   常超  写一下
+        cell.textLabel.text = @"aaaa";
+        cell.imageView.image = [UIImage imageNamed:@"header"];
+    }else if (indexPath.row == 1) {
         cell.imageView.image = [UIImage imageNamed:@"message_icon_group"];
+        cell.textLabel.text = self.arr[indexPath.row - 1];
+    }else if(indexPath.row == 2){
+        cell.imageView.image = [UIImage imageNamed:@"album"];
+        cell.textLabel.text = self.arr[indexPath.row - 1];
     }
     return cell;
 }
 
+//cell的高度
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        return 100;
+    }else{
+        return 50;
+    }
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
