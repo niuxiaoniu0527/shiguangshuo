@@ -6,3 +6,5 @@
 //
 //
 #define kScreenWidth self.view.frame.size.width
+
+#import "EaseMob.h"

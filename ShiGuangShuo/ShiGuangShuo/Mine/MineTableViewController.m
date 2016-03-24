@@ -8,7 +8,7 @@
 
 #import "MineTableViewController.h"
 #import "RequestMine.h"
-
+#import "AddRessBookTableViewController.h"
 @interface MineTableViewController ()
 @property (nonatomic,strong)NSArray *arr;
 
@@ -45,9 +45,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
     if (indexPath.row == 0) {
-#warning 用户名这块需要   常超  写一下
-        cell.textLabel.text = @"aaaa";
-        cell.imageView.image = [UIImage imageNamed:@"header"];
+        NSString *loginUserName = [[EaseMob sharedInstance].chatManager loginInfo][@"username"];
+        cell.textLabel.text = loginUserName;
+        cell.imageView.image = [UIImage imageNamed:@"header.jpg"];
     }else if (indexPath.row == 1) {
         cell.imageView.image = [UIImage imageNamed:@"message_icon_group"];
         cell.textLabel.text = self.arr[indexPath.row - 1];
@@ -67,6 +67,20 @@
     }
     
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 1) {
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        UINavigationController *addRessBookTVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"AddRessBookNavigationController"];
+        
+        //跳转事件
+        [self presentViewController:addRessBookTVC animated:YES completion:nil];
+        
+    }
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.

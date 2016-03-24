@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "PublicViewController.h"
 #import "UIImage+ImageEffects.h"
+#import "NSString+Valid.h"
+#import "PublicViewController.h"
 
 @interface LoginViewController ()
 ///背景图片
@@ -47,7 +49,8 @@
     self.loginButton.titleLabel.font = [UIFont fontWithName:@"Kaiti" size:18];
     self.registerButton.titleLabel.font = [UIFont fontWithName:@"Kaiti" size:13];
     self.problemLabel.font = [UIFont fontWithName:@"Kaiti" size:13];
-    NSLog(@"%f",self.userText.frame.size.height);
+    //NSLog(@"%f",self.userText.frame.size.height);
+    
     
 }
 
@@ -57,16 +60,66 @@
     [self.bgImageV addSubview:vv];
     
 }
+#pragma mark ---------登入按钮
+- (IBAction)loginAction:(UIButton *)sender {
+    //第一次登入自动获取好友列表
+    [[EaseMob sharedInstance].chatManager setIsAutoFetchBuddyList:YES];
+    //获取用户名
+    NSString *userName = self.userText.text;
+    //获取密码
+    NSString *passWord = self.passWordText.text;
+    
+    //判断用户名密码为不为空
+    if (userName.length == 0 || passWord.length == 0) {
+        [self Alert:@"用户名密码为不为空"];
+    }
+    if ([userName isChinese]) {
+        [self Alert:@"用户名不能为中文"];
+    }
 
+    //登入
+    [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:userName password:passWord completion:^(NSDictionary *loginInfo, EMError *error) {
+        //登入请求完成后block回调
+        if (!error) {
+            //设置自动登入
+            [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
+            
+            UIAlertController  *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"登录成功" preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alert animated:YES completion:nil];
+            
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                [self dismissViewControllerAnimated:alert completion:nil];
+                
+                UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                
+                PublicViewController *publicVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"PublicViewController"];
+                
+                //跳转事件
+                [self presentViewController:publicVC animated:YES completion:nil];
+                
+            });
+            
+        }else{
+            [self Alert:[NSString stringWithFormat:@"登录失败:%@",error]];
+        }
+        
+    } onQueue:dispatch_get_main_queue()];
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
+
+//提示框
+- (void)Alert:(NSString *)message{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 
 @end

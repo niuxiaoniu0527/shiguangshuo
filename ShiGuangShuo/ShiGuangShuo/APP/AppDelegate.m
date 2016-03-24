@@ -7,17 +7,70 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
+#import "PublicViewController.h"
+@interface AppDelegate ()<EMChatManagerDelegate>
 
 @end
 
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    //registerSDKWithAppKey:注册的appKey，详细见下面注释。
+    //apnsCertName:推送证书名(不需要加后缀)，详细见下面注释。
+    //1.初始化SDK,并隐藏环信SDK的日志输出
+    [[EaseMob sharedInstance] registerSDKWithAppKey:@"cc1314567#timesay" apnsCertName:nil otherConfig:@{kSDKConfigEnableConsoleLogger:@(NO)}];
+    [[EaseMob sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    //2.监听自动登入的状态
+    [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+    
     return YES;
+}
+
+
+
+#pragma mark 自动登入的回调
+- (void)didAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error{
+    if (!error) {
+        // NSLog(@"自动登入成功 %@",loginInfo);
+        //如果登入过直接来到主界面
+        if ([[EaseMob sharedInstance].chatManager isAutoLoginEnabled]) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                
+                PublicViewController *publicVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"PublicViewController"];
+                self.window.rootViewController = publicVC;
+                
+            });
+    }else{
+        NSLog(@"自动登入失败 %@",error);
+        }
+    }
+}
+- (void)dealloc{
+    //移除聊天管理器的代理
+    [[EaseMob sharedInstance].chatManager removeDelegate:self];
+}
+
+
+// App进入后台
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    [[EaseMob sharedInstance] applicationDidEnterBackground:application];
+}
+
+// App将要从后台返回
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    [[EaseMob sharedInstance] applicationWillEnterForeground:application];
+}
+
+// 申请处理时间
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    [[EaseMob sharedInstance] applicationWillTerminate:application];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -25,21 +78,8 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end
