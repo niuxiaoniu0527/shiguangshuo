@@ -10,4 +10,7 @@
 
 @interface CharViewController : UIViewController
 
+//好友
+@property (nonatomic,strong) EMBuddy *buddy;
+
 @end

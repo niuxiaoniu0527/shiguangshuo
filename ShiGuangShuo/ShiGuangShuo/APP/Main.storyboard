@@ -159,7 +159,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="bdA-As-1zx" kind="show" id="Psl-dZ-d2O"/>
+                                    <segue destination="bdA-As-1zx" kind="show" id="A8c-u2-MA7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -183,7 +183,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uX6-Rw-UZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2292" y="2971"/>
+            <point key="canvasLocation" x="2324" y="2971"/>
         </scene>
         <!--添加好友-->
         <scene sceneID="RFh-mR-mui">
@@ -309,6 +309,9 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bdA-As-1zx" id="nZG-SG-ymZ"/>
+                                        </connections>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87808818717277481" green="0.87808818717277481" blue="0.87808818717277481" alpha="1" colorSpace="calibratedRGB"/>
@@ -319,12 +322,18 @@
                                     <constraint firstItem="MJT-K2-Y2U" firstAttribute="leading" secondItem="fAi-pe-JLy" secondAttribute="trailing" constant="20" id="6Uf-SC-ksx"/>
                                     <constraint firstItem="fAi-pe-JLy" firstAttribute="leading" secondItem="Il7-Bw-6p8" secondAttribute="trailing" constant="20" id="B3j-Zw-Weo"/>
                                     <constraint firstAttribute="bottom" secondItem="YZ7-nz-ECk" secondAttribute="bottom" constant="5" id="Rpg-Go-dh6"/>
+                                    <constraint firstAttribute="height" constant="46" id="WKb-5C-y7a"/>
                                     <constraint firstAttribute="bottom" secondItem="MJT-K2-Y2U" secondAttribute="bottom" constant="5" id="YGF-aI-ylD"/>
                                     <constraint firstItem="fAi-pe-JLy" firstAttribute="top" secondItem="0Lp-MM-dzf" secondAttribute="top" constant="6" id="bMc-02-dEE"/>
                                     <constraint firstItem="Il7-Bw-6p8" firstAttribute="leading" secondItem="0Lp-MM-dzf" secondAttribute="leading" constant="10" id="i77-yv-VH3"/>
                                     <constraint firstAttribute="bottom" secondItem="fAi-pe-JLy" secondAttribute="bottom" constant="7" id="iMy-vO-eCW"/>
                                     <constraint firstAttribute="height" constant="46" id="tVk-1B-Br1"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tVk-1B-Br1"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wPn-H8-vMl">
                                 <rect key="frame" x="0.0" y="64" width="600" height="490"/>
@@ -421,17 +430,31 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="0Lp-MM-dzf" secondAttribute="bottom" id="Aso-xu-weA"/>
                             <constraint firstItem="wPn-H8-vMl" firstAttribute="leading" secondItem="gkg-TA-Egj" secondAttribute="leading" id="Jnb-Qi-Q5I"/>
+                            <constraint firstItem="0Lp-MM-dzf" firstAttribute="top" secondItem="wPn-H8-vMl" secondAttribute="bottom" id="Wkh-HJ-eIJ"/>
                             <constraint firstItem="wPn-H8-vMl" firstAttribute="top" secondItem="C2m-ac-ubB" secondAttribute="bottom" id="X1O-iU-EAQ"/>
                             <constraint firstAttribute="trailing" secondItem="0Lp-MM-dzf" secondAttribute="trailing" id="XeT-wc-6RV"/>
                             <constraint firstItem="0Lp-MM-dzf" firstAttribute="leading" secondItem="gkg-TA-Egj" secondAttribute="leading" id="czi-7d-7jQ"/>
                             <constraint firstAttribute="trailing" secondItem="wPn-H8-vMl" secondAttribute="trailing" id="dkB-8e-CUZ"/>
+                            <constraint firstItem="1nn-bG-ud4" firstAttribute="top" secondItem="0Lp-MM-dzf" secondAttribute="bottom" id="eoT-8t-j3X"/>
+                            <constraint firstAttribute="trailing" secondItem="0Lp-MM-dzf" secondAttribute="trailing" id="kgV-aR-u7S"/>
                             <constraint firstItem="0Lp-MM-dzf" firstAttribute="top" secondItem="wPn-H8-vMl" secondAttribute="bottom" id="nhG-IA-4Sn"/>
+                            <constraint firstItem="0Lp-MM-dzf" firstAttribute="leading" secondItem="gkg-TA-Egj" secondAttribute="leading" id="nwR-eb-FcN"/>
+                            <constraint firstAttribute="bottom" secondItem="0Lp-MM-dzf" secondAttribute="bottom" id="zAv-pa-kA2"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Aso-xu-weA"/>
+                                <exclude reference="XeT-wc-6RV"/>
+                                <exclude reference="czi-7d-7jQ"/>
+                                <exclude reference="nhG-IA-4Sn"/>
+                                <exclude reference="eoT-8t-j3X"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="聊天界面" id="UJT-XC-aoO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="charBottomConstraint" destination="Aso-xu-weA" id="6Mf-yI-4rS"/>
+                        <outlet property="charBottomConstraint" destination="zAv-pa-kA2" id="hWE-XD-1ww"/>
                         <outlet property="inputViewBottomConstraint" destination="Aso-xu-weA" id="j37-2F-Kj2"/>
                         <outlet property="tableView" destination="wPn-H8-vMl" id="Te0-5A-toa"/>
                         <outlet property="tableViewBottom" destination="nhG-IA-4Sn" id="hRU-bp-9ih"/>

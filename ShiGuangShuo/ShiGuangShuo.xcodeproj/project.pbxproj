@@ -17,7 +17,6 @@
 		09847C421CA3FC6600FECF1F /* AddressBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09847C401CA3FC6600FECF1F /* AddressBookTableViewCell.xib */; };
 		09AAB3871C9B8DEF007AE732 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AAB3861C9B8DEF007AE732 /* main.m */; };
 		09AAB38A1C9B8DEF007AE732 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AAB3891C9B8DEF007AE732 /* AppDelegate.m */; };
-		09AAB3901C9B8DEF007AE732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09AAB38E1C9B8DEF007AE732 /* Main.storyboard */; };
 		09AAB3921C9B8DEF007AE732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AAB3911C9B8DEF007AE732 /* Assets.xcassets */; };
 		09AAB3951C9B8DEF007AE732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09AAB3931C9B8DEF007AE732 /* LaunchScreen.storyboard */; };
 		09AAB4C61C9BA563007AE732 /* camera_video_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AAB4631C9BA563007AE732 /* camera_video_background@2x.png */; };
@@ -192,7 +191,6 @@
 		3026F00E1CA3775D003D9DEF /* chat_sender_audio_playing_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3026EFF11CA3775D003D9DEF /* chat_sender_audio_playing_full@2x.png */; };
 		3026F00F1CA3775D003D9DEF /* chat_sender_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3026EFF21CA3775D003D9DEF /* chat_sender_bg.png */; };
 		3026F0101CA3775D003D9DEF /* chat_sender_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3026EFF31CA3775D003D9DEF /* chat_sender_bg@2x.png */; };
-		3026F0141CA37F2C003D9DEF /* CharViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3026F0131CA37F2C003D9DEF /* CharViewController.m */; };
 		30935BC61CA27D270087DCB7 /* AddRessBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30935BC41CA27D270087DCB7 /* AddRessBookTableViewController.m */; };
 		30935E101CA28A9F0087DCB7 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 30935E0D1CA28A9F0087DCB7 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		30935E111CA28A9F0087DCB7 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 30935E0F1CA28A9F0087DCB7 /* UIView+SDAutoLayout.m */; };
@@ -203,6 +201,10 @@
 		30B023331CA22F6D0073C76D /* MessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B023321CA22F6D0073C76D /* MessageTableViewController.m */; };
 		30B023351CA2357B0073C76D /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B023341CA2357B0073C76D /* 5.jpg */; };
 		30B023371CA235850073C76D /* header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B023361CA235850073C76D /* header.jpg */; };
+		30F0F9111CA4384E009792D4 /* CharViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F0F9101CA4384E009792D4 /* CharViewController.m */; };
+		30F0F9151CA438E7009792D4 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F0F9141CA438E7009792D4 /* ChatCell.m */; };
+		30F0F9171CA44238009792D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F0F9161CA44238009792D4 /* Main.storyboard */; };
+		30F0F9191CA4480D009792D4 /* chatListCellHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30F0F9181CA4480D009792D4 /* chatListCellHead@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,7 +222,6 @@
 		09AAB3861C9B8DEF007AE732 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09AAB3881C9B8DEF007AE732 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		09AAB3891C9B8DEF007AE732 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		09AAB38F1C9B8DEF007AE732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09AAB3911C9B8DEF007AE732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09AAB3941C9B8DEF007AE732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09AAB3961C9B8DEF007AE732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -489,8 +490,6 @@
 		3026EFF11CA3775D003D9DEF /* chat_sender_audio_playing_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_sender_audio_playing_full@2x.png"; sourceTree = "<group>"; };
 		3026EFF21CA3775D003D9DEF /* chat_sender_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_sender_bg.png; sourceTree = "<group>"; };
 		3026EFF31CA3775D003D9DEF /* chat_sender_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_sender_bg@2x.png"; sourceTree = "<group>"; };
-		3026F0121CA37F2C003D9DEF /* CharViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharViewController.h; sourceTree = "<group>"; };
-		3026F0131CA37F2C003D9DEF /* CharViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharViewController.m; sourceTree = "<group>"; };
 		30935BC31CA27D270087DCB7 /* AddRessBookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRessBookTableViewController.h; sourceTree = "<group>"; };
 		30935BC41CA27D270087DCB7 /* AddRessBookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRessBookTableViewController.m; sourceTree = "<group>"; };
 		30935E0C1CA28A9F0087DCB7 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
@@ -509,6 +508,12 @@
 		30B023321CA22F6D0073C76D /* MessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewController.m; sourceTree = "<group>"; };
 		30B023341CA2357B0073C76D /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		30B023361CA235850073C76D /* header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = header.jpg; sourceTree = "<group>"; };
+		30F0F90F1CA4384E009792D4 /* CharViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharViewController.h; sourceTree = "<group>"; };
+		30F0F9101CA4384E009792D4 /* CharViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharViewController.m; sourceTree = "<group>"; };
+		30F0F9131CA438E7009792D4 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		30F0F9141CA438E7009792D4 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		30F0F9161CA44238009792D4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		30F0F9181CA4480D009792D4 /* chatListCellHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatListCellHead@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -581,7 +586,7 @@
 		09AAB39C1C9B8E06007AE732 /* APP */ = {
 			isa = PBXGroup;
 			children = (
-				09AAB38E1C9B8DEF007AE732 /* Main.storyboard */,
+				30F0F9161CA44238009792D4 /* Main.storyboard */,
 				09AAB3881C9B8DEF007AE732 /* AppDelegate.h */,
 				09AAB3891C9B8DEF007AE732 /* AppDelegate.m */,
 			);
@@ -617,7 +622,8 @@
 		09AAB3A31C9B8F7B007AE732 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				3026F0111CA37EF5003D9DEF /* Char */,
+				30F0F9121CA438E7009792D4 /* View */,
+				30F0F90D1CA4384E009792D4 /* Chat */,
 				30B023381CA23B160073C76D /* AddRessBook */,
 				09AAD0E81C9BEBC3007AE732 /* Request */,
 				09AAD0E71C9BEBAD007AE732 /* ViewController */,
@@ -1133,6 +1139,7 @@
 		3026EFD41CA3775D003D9DEF /* CharImage */ = {
 			isa = PBXGroup;
 			children = (
+				30F0F9181CA4480D009792D4 /* chatListCellHead@2x.png */,
 				3026EFD51CA3775D003D9DEF /* chatBar_face@2x.png */,
 				3026EFD61CA3775D003D9DEF /* chatBar_keyboard@2x.png */,
 				3026EFD71CA3775D003D9DEF /* chatBar_more@2x.png */,
@@ -1180,15 +1187,6 @@
 				3026EFF31CA3775D003D9DEF /* chat_sender_bg@2x.png */,
 			);
 			path = sender_bubble;
-			sourceTree = "<group>";
-		};
-		3026F0111CA37EF5003D9DEF /* Char */ = {
-			isa = PBXGroup;
-			children = (
-				3026F0121CA37F2C003D9DEF /* CharViewController.h */,
-				3026F0131CA37F2C003D9DEF /* CharViewController.m */,
-			);
-			path = Char;
 			sourceTree = "<group>";
 		};
 		30935BC01CA27CF80087DCB7 /* Controller */ = {
@@ -1255,6 +1253,32 @@
 				30935BC01CA27CF80087DCB7 /* Controller */,
 			);
 			path = AddRessBook;
+			sourceTree = "<group>";
+		};
+		30F0F90D1CA4384E009792D4 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				30F0F90E1CA4384E009792D4 /* Controller */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		30F0F90E1CA4384E009792D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30F0F90F1CA4384E009792D4 /* CharViewController.h */,
+				30F0F9101CA4384E009792D4 /* CharViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		30F0F9121CA438E7009792D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30F0F9131CA438E7009792D4 /* ChatCell.h */,
+				30F0F9141CA438E7009792D4 /* ChatCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1425,6 +1449,7 @@
 				09AAD0E31C9BEB46007AE732 /* Mine.plist in Resources */,
 				3026EFF41CA3775D003D9DEF /* chatBar_face@2x.png in Resources */,
 				09AAD0FF1C9BF78E007AE732 /* message_more_pic@3x.png in Resources */,
+				30F0F9191CA4480D009792D4 /* chatListCellHead@2x.png in Resources */,
 				09AAB5051C9BA563007AE732 /* surprise_picturebutton_highlighted@2x.png in Resources */,
 				3026F00D1CA3775D003D9DEF /* chat_sender_audio_playing_full.png in Resources */,
 				09AAB4ED1C9BA563007AE732 /* feed_trendcard_icon_addattention@2x.png in Resources */,
@@ -1441,6 +1466,7 @@
 				3026F00C1CA3775D003D9DEF /* chat_sender_audio_playing_003@2x.png in Resources */,
 				09AAB4FD1C9BA563007AE732 /* navigationbar_search_light@2x.png in Resources */,
 				3026F0051CA3775D003D9DEF /* chat_sender_audio_playing_000.png in Resources */,
+				30F0F9171CA44238009792D4 /* Main.storyboard in Resources */,
 				09AAB5081C9BA563007AE732 /* surprise_toolbar_picture@3x.png in Resources */,
 				09AAB5211C9BA563007AE732 /* tabbar_message_center_selected@2x.png in Resources */,
 				09847C3D1CA3E8C500FECF1F /* ExitCell.xib in Resources */,
@@ -1471,7 +1497,6 @@
 				09AAB4E61C9BA563007AE732 /* common_share_light@2x.png in Resources */,
 				3026EFFD1CA3775D003D9DEF /* chat_receiver_audio_playing002.png in Resources */,
 				09B1ECA21C9FE602001E4808 /* Password_48px.png in Resources */,
-				09AAB3901C9B8DEF007AE732 /* Main.storyboard in Resources */,
 				09AAB4E31C9BA563007AE732 /* common_button_sort_edit_highlighted@3x.png in Resources */,
 				09AAB4E51C9BA563007AE732 /* common_praise_light_selected@3x.png in Resources */,
 				09AAB5161C9BA563007AE732 /* tabbar_discover_selected@3x.png in Resources */,
@@ -1500,6 +1525,7 @@
 				30B0232E1CA2232C0073C76D /* NoInternetHeadView.m in Sources */,
 				30935E101CA28A9F0087DCB7 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				09B1EC9A1C9FE4CA001E4808 /* UIImage+ImageEffects.m in Sources */,
+				30F0F9111CA4384E009792D4 /* CharViewController.m in Sources */,
 				30B023331CA22F6D0073C76D /* MessageTableViewController.m in Sources */,
 				09B1ECC01CA01B2F001E4808 /* RegiestViewController.m in Sources */,
 				30935E1A1CA29A020087DCB7 /* AddFriendTableViewCell.m in Sources */,
@@ -1507,10 +1533,10 @@
 				30935E171CA297D10087DCB7 /* AddFriendHeadView.m in Sources */,
 				09AAD0EB1C9BEBDD007AE732 /* RequestMine.m in Sources */,
 				30935E111CA28A9F0087DCB7 /* UIView+SDAutoLayout.m in Sources */,
-				3026F0141CA37F2C003D9DEF /* CharViewController.m in Sources */,
 				09AAB3871C9B8DEF007AE732 /* main.m in Sources */,
 				09AAD1101C9C222D007AE732 /* PublicViewController.m in Sources */,
 				30935BC61CA27D270087DCB7 /* AddRessBookTableViewController.m in Sources */,
+				30F0F9151CA438E7009792D4 /* ChatCell.m in Sources */,
 				09847C411CA3FC6600FECF1F /* AddressBookTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1518,15 +1544,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		09AAB38E1C9B8DEF007AE732 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09AAB38F1C9B8DEF007AE732 /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		09AAB3931C9B8DEF007AE732 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

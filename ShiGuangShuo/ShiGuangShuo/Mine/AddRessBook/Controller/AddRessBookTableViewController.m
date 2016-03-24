@@ -7,7 +7,7 @@
 //
 
 #import "AddRessBookTableViewController.h"
-
+#import "CharViewController.h"
 @interface AddRessBookTableViewController ()<EMChatManagerDelegate>
 
 //好友列表
@@ -124,6 +124,16 @@
         [[EaseMob sharedInstance].chatManager removeBuddy:buddyName removeFromRemote:YES error:nil];
     }
 }
-
+#pragma mark-------------传值
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    //向聊天控制器传递值
+    id destView = segue.destinationViewController;
+    if ([destView isKindOfClass:[CharViewController class]]) {
+        CharViewController *chatVC = destView;
+        //获取点中的行
+        NSInteger selectedRow = [self.tableView indexPathForSelectedRow].row;
+        chatVC.buddy = self.buddyList[selectedRow];
+    }
+}
 
 @end
