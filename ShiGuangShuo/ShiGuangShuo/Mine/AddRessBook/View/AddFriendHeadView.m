@@ -14,10 +14,14 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.textField = [[UITextField alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width - 250) / 2 ,(self.size.height - 40) / 2 , 250, 40)];
-        self.textField.placeholder = @"请输入对方ID";
-        self.textField.layer.borderWidth = 1.5;
-        self.textField.layer.cornerRadius = 15;
+        self.textField = [[UITextField alloc] initWithFrame:CGRectMake(35 ,10 , self.frame.size.width - 40, 40)];
+        self.textField.placeholder = @"  请输入对方ID";
+        self.textField.layer.borderWidth = 1;
+        self.textField.layer.cornerRadius = 10;
+        self.textField.layer.borderColor = [UIColor blackColor].CGColor;
+        UIImageView *searchImageV = [[UIImageView alloc] initWithFrame:CGRectMake(5, 15, 25, 25)];
+        searchImageV.image = [UIImage imageNamed:@"search"];
+        [self addSubview:searchImageV];
         [self addSubview:self.textField];
     }
     return self;

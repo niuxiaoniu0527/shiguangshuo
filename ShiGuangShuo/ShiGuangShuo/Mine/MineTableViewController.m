@@ -9,6 +9,8 @@
 #import "MineTableViewController.h"
 #import "RequestMine.h"
 #import "AddRessBookTableViewController.h"
+#import "ExitCell.h"
+
 @interface MineTableViewController ()
 @property (nonatomic,strong)NSArray *arr;
 
@@ -20,7 +22,12 @@
     [super viewDidLoad];
     
     self.arr = [RequestMine setData];
+    //注册退出的cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"ExitCell" bundle:nil] forCellReuseIdentifier:@"ExitCell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -30,55 +37,74 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.arr.count + 1;
+    if (section == 0) {
+        return 1;
+    }else if (section == 1){
+    return self.arr.count;
+    }else{
+        return 1;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
-    }
-    if (indexPath.row == 0) {
-        NSString *loginUserName = [[EaseMob sharedInstance].chatManager loginInfo][@"username"];
-        cell.textLabel.text = loginUserName;
-        cell.imageView.image = [UIImage imageNamed:@"header.jpg"];
-    }else if (indexPath.row == 1) {
-        cell.imageView.image = [UIImage imageNamed:@"message_icon_group"];
-        cell.textLabel.text = self.arr[indexPath.row - 1];
-    }else if(indexPath.row == 2){
-        cell.imageView.image = [UIImage imageNamed:@"album"];
-        cell.textLabel.text = self.arr[indexPath.row - 1];
-    }
-    return cell;
-}
+    if (indexPath.section == 0 || indexPath.section == 1) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        if (indexPath.section == 0) {
+            NSString *loginUserName = [[EaseMob sharedInstance].chatManager loginInfo][@"username"];
+            cell.textLabel.text = loginUserName;
+            cell.imageView.image = [UIImage imageNamed:@"header.jpg"];
+            cell.imageView.frame = CGRectMake(10, 10, 100, 100);
+        }
+        
+        if (indexPath.section == 1) {
+            
+            if (indexPath.row == 0) {
+                cell.imageView.image = [UIImage imageNamed:@"message_icon_group"];
+                cell.textLabel.text = self.arr[indexPath.row];
+                
+            }else if (indexPath.row == 1) {
+                cell.imageView.image = [UIImage imageNamed:@"album"];
+                cell.textLabel.text = self.arr[indexPath.row];
+            }
+        }
+        return cell;
 
+    }else{
+        ExitCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExitCell" forIndexPath:indexPath];
+        return cell;
+    }
+}
 //cell的高度
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         return 100;
     }else{
-        return 50;
+        return 45;
     }
-    
+}
+//footer高度
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.1;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 1) {
-        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
-        UINavigationController *addRessBookTVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"AddRessBookNavigationController"];
-        
-        //跳转事件
-        [self presentViewController:addRessBookTVC animated:YES completion:nil];
-        
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            
+            UITableViewController *addRessBookTVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"AddRessBookTableViewController"];
+            //跳转事件
+            [self.navigationController pushViewController:addRessBookTVC animated:YES];
+            
+        }
     }
-    
 }
 
 

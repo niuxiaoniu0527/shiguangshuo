@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface AddFriendHeadView : UIView
 
 @property (nonatomic,strong)UITextField *textField;

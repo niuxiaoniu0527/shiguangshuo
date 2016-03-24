@@ -9,6 +9,7 @@
 #import "AddFriendViewTableViewController.h"
 #import "AddFriendHeadView.h"
 #import "AddFriendTableViewCell.h"
+#import "UIImage+ImageEffects.h"
 @interface AddFriendViewTableViewController ()<EMChatManagerDelegate>
 
 @property (nonatomic,strong) NSMutableArray *dataSource;
@@ -28,6 +29,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //添加好友页面的背景图
+    UIImage *blurImage = [[UIImage imageNamed:@"1111.jpeg"] blurImageWithRadius:15];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:blurImage];
+    
     self.addFriendHeadView = [[AddFriendHeadView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 70)];
     self.tableView.tableHeaderView = self.addFriendHeadView;
     //监听添加好友
@@ -57,6 +63,7 @@
     }
     cell.userName.text = self.dataSource[indexPath.row];
     [cell.addBtn addTarget:self action:@selector(addFriendAction:) forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
 }
 

@@ -8,6 +8,7 @@
 
 #import "MessageTableViewController.h"
 #import "NoInternetHeadView.h"
+#import "AddressBookTableViewCell.h"
 @interface MessageTableViewController ()<EMChatManagerDelegate>
 
 @property (nonatomic,strong) NoInternetHeadView *noInternetView;
@@ -30,6 +31,8 @@
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
     
     self.isConnect = YES;
+    //注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"AddressBookTableViewCell" bundle:nil] forCellReuseIdentifier:@"AddressBookCell"];
     
 }
 
@@ -50,14 +53,22 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cell_id = @"cell_id";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell_id];
-    }
-    cell.textLabel.text = @"1111";
+//    static NSString *cell_id = @"cell_id";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell_id];
+//    }
+//    cell.textLabel.text = @"1111";
+    AddressBookTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddressBookCell" forIndexPath:indexPath];
+    cell.imageV.image = [UIImage imageNamed:@"header.jpg"];
+    cell.name.text = @"2222";
+    
     
     return cell;
+}
+//cell高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
 }
 
 //设置头view

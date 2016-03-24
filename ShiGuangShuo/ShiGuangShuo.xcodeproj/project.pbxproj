@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09847C2C1CA3C13E00FECF1F /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09847C2B1CA3C13E00FECF1F /* libEaseMobClientSDK.a */; };
+		09847C2E1CA3CA8400FECF1F /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 09847C2D1CA3CA8400FECF1F /* search.png */; };
+		09847C301CA3D23600FECF1F /* 1111.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 09847C2F1CA3D23600FECF1F /* 1111.jpeg */; };
+		09847C361CA3DAFE00FECF1F /* 设置.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 09847C351CA3DAFE00FECF1F /* 设置.jpeg */; };
+		09847C3C1CA3E8C500FECF1F /* ExitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09847C3A1CA3E8C500FECF1F /* ExitCell.m */; };
+		09847C3D1CA3E8C500FECF1F /* ExitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09847C3B1CA3E8C500FECF1F /* ExitCell.xib */; };
+		09847C411CA3FC6600FECF1F /* AddressBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09847C3F1CA3FC6600FECF1F /* AddressBookTableViewCell.m */; };
+		09847C421CA3FC6600FECF1F /* AddressBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09847C401CA3FC6600FECF1F /* AddressBookTableViewCell.xib */; };
 		09AAB3871C9B8DEF007AE732 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AAB3861C9B8DEF007AE732 /* main.m */; };
 		09AAB38A1C9B8DEF007AE732 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AAB3891C9B8DEF007AE732 /* AppDelegate.m */; };
 		09AAB3901C9B8DEF007AE732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09AAB38E1C9B8DEF007AE732 /* Main.storyboard */; };
@@ -153,7 +161,6 @@
 		3017F7A01CA0F71F00A7B3CF /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3017F79F1CA0F71F00A7B3CF /* libiconv.tbd */; };
 		3017F7A21CA0F72B00A7B3CF /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3017F7A11CA0F72B00A7B3CF /* libresolv.tbd */; };
 		3017F7A41CA0F73700A7B3CF /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3017F7A31CA0F73700A7B3CF /* libxml2.tbd */; };
-		3017F8111CA0F7AD00A7B3CF /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3017F80E1CA0F7AD00A7B3CF /* libEaseMobClientSDK.a */; };
 		3017F8121CA0F7AD00A7B3CF /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3017F8101CA0F7AD00A7B3CF /* EaseMob.bundle */; };
 		3017F83B1CA13F2300A7B3CF /* NSString+Valid.m in Sources */ = {isa = PBXBuildFile; fileRef = 3017F83A1CA13F2300A7B3CF /* NSString+Valid.m */; };
 		3026EFF41CA3775D003D9DEF /* chatBar_face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3026EFD51CA3775D003D9DEF /* chatBar_face@2x.png */; };
@@ -199,6 +206,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09847C2B1CA3C13E00FECF1F /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
+		09847C2D1CA3CA8400FECF1F /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		09847C2F1CA3D23600FECF1F /* 1111.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1111.jpeg; sourceTree = "<group>"; };
+		09847C351CA3DAFE00FECF1F /* 设置.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "设置.jpeg"; sourceTree = "<group>"; };
+		09847C391CA3E8C500FECF1F /* ExitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExitCell.h; sourceTree = "<group>"; };
+		09847C3A1CA3E8C500FECF1F /* ExitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExitCell.m; sourceTree = "<group>"; };
+		09847C3B1CA3E8C500FECF1F /* ExitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExitCell.xib; sourceTree = "<group>"; };
+		09847C3E1CA3FC6600FECF1F /* AddressBookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookTableViewCell.h; sourceTree = "<group>"; };
+		09847C3F1CA3FC6600FECF1F /* AddressBookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookTableViewCell.m; sourceTree = "<group>"; };
+		09847C401CA3FC6600FECF1F /* AddressBookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressBookTableViewCell.xib; sourceTree = "<group>"; };
 		09AAB3821C9B8DEF007AE732 /* ShiGuangShuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiGuangShuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AAB3861C9B8DEF007AE732 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		09AAB3881C9B8DEF007AE732 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -440,7 +457,6 @@
 		3017F8091CA0F7AD00A7B3CF /* EMNetworkMonitorDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMNetworkMonitorDefs.h; sourceTree = "<group>"; };
 		3017F80B1CA0F7AD00A7B3CF /* EMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMError.h; sourceTree = "<group>"; };
 		3017F80C1CA0F7AD00A7B3CF /* EMErrorDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMErrorDefs.h; sourceTree = "<group>"; };
-		3017F80E1CA0F7AD00A7B3CF /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
 		3017F8101CA0F7AD00A7B3CF /* EaseMob.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseMob.bundle; sourceTree = "<group>"; };
 		3017F8391CA13F2300A7B3CF /* NSString+Valid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Valid.h"; sourceTree = "<group>"; };
 		3017F83A1CA13F2300A7B3CF /* NSString+Valid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Valid.m"; sourceTree = "<group>"; };
@@ -500,7 +516,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3017F8111CA0F7AD00A7B3CF /* libEaseMobClientSDK.a in Frameworks */,
+				09847C2C1CA3C13E00FECF1F /* libEaseMobClientSDK.a in Frameworks */,
 				3017F7A41CA0F73700A7B3CF /* libxml2.tbd in Frameworks */,
 				3017F7A21CA0F72B00A7B3CF /* libresolv.tbd in Frameworks */,
 				3017F7A01CA0F71F00A7B3CF /* libiconv.tbd in Frameworks */,
@@ -621,6 +637,9 @@
 		09AAB3A61C9B9620007AE732 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				09847C351CA3DAFE00FECF1F /* 设置.jpeg */,
+				09847C2F1CA3D23600FECF1F /* 1111.jpeg */,
+				09847C2D1CA3CA8400FECF1F /* search.png */,
 				3026EFD41CA3775D003D9DEF /* CharImage */,
 				30B023361CA235850073C76D /* header.jpg */,
 				30B023341CA2357B0073C76D /* 5.jpg */,
@@ -1098,7 +1117,7 @@
 		3017F80D1CA0F7AD00A7B3CF /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				3017F80E1CA0F7AD00A7B3CF /* libEaseMobClientSDK.a */,
+				09847C2B1CA3C13E00FECF1F /* libEaseMobClientSDK.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -1190,6 +1209,12 @@
 				30935E161CA297D10087DCB7 /* AddFriendHeadView.m */,
 				30935E181CA29A020087DCB7 /* AddFriendTableViewCell.h */,
 				30935E191CA29A020087DCB7 /* AddFriendTableViewCell.m */,
+				09847C391CA3E8C500FECF1F /* ExitCell.h */,
+				09847C3A1CA3E8C500FECF1F /* ExitCell.m */,
+				09847C3B1CA3E8C500FECF1F /* ExitCell.xib */,
+				09847C3E1CA3FC6600FECF1F /* AddressBookTableViewCell.h */,
+				09847C3F1CA3FC6600FECF1F /* AddressBookTableViewCell.m */,
+				09847C401CA3FC6600FECF1F /* AddressBookTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1335,6 +1360,7 @@
 				09AAB52E1C9BA65D007AE732 /* tabbar_compose_button_highlighted@3x.png in Resources */,
 				3026F0041CA3775D003D9DEF /* chat_receiver_bg@2x.png in Resources */,
 				09AAB50A1C9BA563007AE732 /* surprise_toolbar_picture_highlighted@3x.png in Resources */,
+				09847C2E1CA3CA8400FECF1F /* search.png in Resources */,
 				09AAB5031C9BA563007AE732 /* surprise_picturebutton@2x.png in Resources */,
 				09AAB4CA1C9BA563007AE732 /* card_icon_addattention@2x.png in Resources */,
 				09AAB4D01C9BA563007AE732 /* common_button_big_green_highlighted@2x.png in Resources */,
@@ -1356,6 +1382,7 @@
 				09AAB5131C9BA563007AE732 /* tabbar_discover_highlighted@2x.png in Resources */,
 				09AAB4CB1C9BA563007AE732 /* card_icon_delete@2x.png in Resources */,
 				09AAB5121C9BA563007AE732 /* tabbar_discover@3x.png in Resources */,
+				09847C301CA3D23600FECF1F /* 1111.jpeg in Resources */,
 				3026EFFC1CA3775D003D9DEF /* chat_receiver_audio_playing001@2x.png in Resources */,
 				09AAB5071C9BA563007AE732 /* surprise_toolbar_picture@2x.png in Resources */,
 				09AAB4F11C9BA563007AE732 /* message_announcement_common@2x.png in Resources */,
@@ -1368,6 +1395,7 @@
 				09AAB50F1C9BA563007AE732 /* tabbar_compose_icon_add_highlighted@2x.png in Resources */,
 				09AAB51B1C9BA563007AE732 /* tabbar_home_selected@2x.png in Resources */,
 				09AAB4F61C9BA563007AE732 /* more_icon_back@3x.png in Resources */,
+				09847C361CA3DAFE00FECF1F /* 设置.jpeg in Resources */,
 				09AAB4DB1C9BA563007AE732 /* common_button_green_disable@2x.png in Resources */,
 				09AAB4D41C9BA563007AE732 /* common_button_big_red_highlighted@2x.png in Resources */,
 				09AAB4F41C9BA563007AE732 /* messagescenter_good@3x.png in Resources */,
@@ -1377,6 +1405,7 @@
 				3026F0011CA3775D003D9DEF /* chat_receiver_audio_playing_full.png in Resources */,
 				09AAB5241C9BA563007AE732 /* tabbar_profile@3x.png in Resources */,
 				09AAB51C1C9BA563007AE732 /* tabbar_home_selected@3x.png in Resources */,
+				09847C421CA3FC6600FECF1F /* AddressBookTableViewCell.xib in Resources */,
 				09AAB50D1C9BA563007AE732 /* tabbar_compose_camera@2x.png in Resources */,
 				09AAB4C61C9BA563007AE732 /* camera_video_background@2x.png in Resources */,
 				09AAB4EB1C9BA563007AE732 /* compose_product_plus@3x.png in Resources */,
@@ -1414,6 +1443,7 @@
 				3026F0051CA3775D003D9DEF /* chat_sender_audio_playing_000.png in Resources */,
 				09AAB5081C9BA563007AE732 /* surprise_toolbar_picture@3x.png in Resources */,
 				09AAB5211C9BA563007AE732 /* tabbar_message_center_selected@2x.png in Resources */,
+				09847C3D1CA3E8C500FECF1F /* ExitCell.xib in Resources */,
 				3026F0081CA3775D003D9DEF /* chat_sender_audio_playing_001@2x.png in Resources */,
 				09AAB4CF1C9BA563007AE732 /* common_button_big_green_disable@2x.png in Resources */,
 				09AAB4EE1C9BA563007AE732 /* feed_trendcard_icon_addattention@3x.png in Resources */,
@@ -1463,6 +1493,7 @@
 				09AAD1051C9BFA5E007AE732 /* AddViewController.m in Sources */,
 				09AAD0E61C9BEB8A007AE732 /* MineTableViewController.m in Sources */,
 				09AAD10A1C9C205F007AE732 /* LoginViewController.m in Sources */,
+				09847C3C1CA3E8C500FECF1F /* ExitCell.m in Sources */,
 				09AAD10D1C9C20CA007AE732 /* HomeTableViewController.m in Sources */,
 				09AAB38A1C9B8DEF007AE732 /* AppDelegate.m in Sources */,
 				3017F83B1CA13F2300A7B3CF /* NSString+Valid.m in Sources */,
@@ -1480,6 +1511,7 @@
 				09AAB3871C9B8DEF007AE732 /* main.m in Sources */,
 				09AAD1101C9C222D007AE732 /* PublicViewController.m in Sources */,
 				30935BC61CA27D270087DCB7 /* AddRessBookTableViewController.m in Sources */,
+				09847C411CA3FC6600FECF1F /* AddressBookTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

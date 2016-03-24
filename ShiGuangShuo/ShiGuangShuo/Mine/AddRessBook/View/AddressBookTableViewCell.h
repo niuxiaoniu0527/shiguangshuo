@@ -1,0 +1,17 @@
+//
+//  AddressBookTableViewCell.h
+//  ShiGuangShuo
+//
+//  Created by 付莉 on 16/3/24.
+//  Copyright © 2016年 Fuli. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface AddressBookTableViewCell : UITableViewCell
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageV;
+
+@property (strong, nonatomic) IBOutlet UILabel *name;
+
+@end
