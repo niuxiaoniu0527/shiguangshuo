@@ -81,5 +81,62 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
+#pragma mark -------- 好友添加代理方法
+//好友请求被同意
+- (void)didAcceptedByBuddy:(NSString *)username{
+    
+    NSString *message = [NSString stringWithFormat:@"%@ 同意了你的好友请求",username];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"好友添加消息" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    });
+
+    
+}
+//好友请求被拒绝
+- (void)didRejectedByBuddy:(NSString *)username{
+    NSString *message = [NSString stringWithFormat:@"%@ 拒绝了你的好友请求",username];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"好友添加消息" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    });
+
+    
+    
+    
+    
+}
+#pragma mark ------------接受好友的添加请求
+- (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"好友添加请求" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"接受" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [[EaseMob sharedInstance].chatManager acceptBuddyRequest:username error:nil];
+    }];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"拒接" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[EaseMob sharedInstance].chatManager rejectBuddyRequest:username reason:nil error:nil];
+    }];
+    [alert addAction:action];
+    [alert addAction:action1];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    });
+
+    
+    
+    
+    
+    
+}
+
 
 @end

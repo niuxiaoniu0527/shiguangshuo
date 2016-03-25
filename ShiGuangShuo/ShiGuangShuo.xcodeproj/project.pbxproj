@@ -205,6 +205,19 @@
 		30F0F9151CA438E7009792D4 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F0F9141CA438E7009792D4 /* ChatCell.m */; };
 		30F0F9171CA44238009792D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F0F9161CA44238009792D4 /* Main.storyboard */; };
 		30F0F9191CA4480D009792D4 /* chatListCellHead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30F0F9181CA4480D009792D4 /* chatListCellHead@2x.png */; };
+		30FC63611CA4D1F30070B57C /* EMAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC63431CA4D1F30070B57C /* EMAudioPlayerUtil.m */; };
+		30FC63621CA4D1F30070B57C /* EMAudioRecorderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC63451CA4D1F30070B57C /* EMAudioRecorderUtil.m */; };
+		30FC63631CA4D1F30070B57C /* EMCDDeviceManager+Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC63471CA4D1F30070B57C /* EMCDDeviceManager+Media.m */; };
+		30FC63641CA4D1F30070B57C /* EMCDDeviceManager+Microphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC63491CA4D1F30070B57C /* EMCDDeviceManager+Microphone.m */; };
+		30FC63651CA4D1F30070B57C /* EMCDDeviceManager+ProximitySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC634B1CA4D1F30070B57C /* EMCDDeviceManager+ProximitySensor.m */; };
+		30FC63661CA4D1F30070B57C /* EMCDDeviceManager+Remind.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC634D1CA4D1F30070B57C /* EMCDDeviceManager+Remind.m */; };
+		30FC63671CA4D1F30070B57C /* EMCDDeviceManagerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC63501CA4D1F30070B57C /* EMCDDeviceManagerBase.m */; };
+		30FC63681CA4D1F30070B57C /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 30FC63541CA4D1F30070B57C /* amrFileCodec.mm */; };
+		30FC63691CA4D1F30070B57C /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = 30FC63561CA4D1F30070B57C /* wav.mm */; };
+		30FC636A1CA4D1F30070B57C /* EMVoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 30FC63581CA4D1F30070B57C /* EMVoiceConverter.mm */; };
+		30FC636B1CA4D1F30070B57C /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FC635C1CA4D1F30070B57C /* libopencore-amrnb.a */; };
+		30FC636C1CA4D1F30070B57C /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FC63601CA4D1F30070B57C /* libopencore-amrwb.a */; };
+		30FC63701CA514F70070B57C /* AudioPlayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC636F1CA514F70070B57C /* AudioPlayTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -514,6 +527,38 @@
 		30F0F9141CA438E7009792D4 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		30F0F9161CA44238009792D4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		30F0F9181CA4480D009792D4 /* chatListCellHead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatListCellHead@2x.png"; sourceTree = "<group>"; };
+		30FC633E1CA4D1F30070B57C /* EMCDDeviceManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerDelegate.h; sourceTree = "<group>"; };
+		30FC633F1CA4D1F30070B57C /* EMCDDeviceManagerProximitySensorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerProximitySensorDelegate.h; sourceTree = "<group>"; };
+		30FC63411CA4D1F30070B57C /* DemoErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoErrorCode.h; sourceTree = "<group>"; };
+		30FC63421CA4D1F30070B57C /* EMAudioPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAudioPlayerUtil.h; sourceTree = "<group>"; };
+		30FC63431CA4D1F30070B57C /* EMAudioPlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAudioPlayerUtil.m; sourceTree = "<group>"; };
+		30FC63441CA4D1F30070B57C /* EMAudioRecorderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAudioRecorderUtil.h; sourceTree = "<group>"; };
+		30FC63451CA4D1F30070B57C /* EMAudioRecorderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAudioRecorderUtil.m; sourceTree = "<group>"; };
+		30FC63461CA4D1F30070B57C /* EMCDDeviceManager+Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Media.h"; sourceTree = "<group>"; };
+		30FC63471CA4D1F30070B57C /* EMCDDeviceManager+Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Media.m"; sourceTree = "<group>"; };
+		30FC63481CA4D1F30070B57C /* EMCDDeviceManager+Microphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Microphone.h"; sourceTree = "<group>"; };
+		30FC63491CA4D1F30070B57C /* EMCDDeviceManager+Microphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Microphone.m"; sourceTree = "<group>"; };
+		30FC634A1CA4D1F30070B57C /* EMCDDeviceManager+ProximitySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+ProximitySensor.h"; sourceTree = "<group>"; };
+		30FC634B1CA4D1F30070B57C /* EMCDDeviceManager+ProximitySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+ProximitySensor.m"; sourceTree = "<group>"; };
+		30FC634C1CA4D1F30070B57C /* EMCDDeviceManager+Remind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Remind.h"; sourceTree = "<group>"; };
+		30FC634D1CA4D1F30070B57C /* EMCDDeviceManager+Remind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Remind.m"; sourceTree = "<group>"; };
+		30FC634E1CA4D1F30070B57C /* EMCDDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManager.h; sourceTree = "<group>"; };
+		30FC634F1CA4D1F30070B57C /* EMCDDeviceManagerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerBase.h; sourceTree = "<group>"; };
+		30FC63501CA4D1F30070B57C /* EMCDDeviceManagerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCDDeviceManagerBase.m; sourceTree = "<group>"; };
+		30FC63531CA4D1F30070B57C /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		30FC63541CA4D1F30070B57C /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		30FC63551CA4D1F30070B57C /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+		30FC63561CA4D1F30070B57C /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		30FC63571CA4D1F30070B57C /* EMVoiceConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMVoiceConverter.h; sourceTree = "<group>"; };
+		30FC63581CA4D1F30070B57C /* EMVoiceConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EMVoiceConverter.mm; sourceTree = "<group>"; };
+		30FC635A1CA4D1F30070B57C /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		30FC635B1CA4D1F30070B57C /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		30FC635C1CA4D1F30070B57C /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		30FC635E1CA4D1F30070B57C /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		30FC635F1CA4D1F30070B57C /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		30FC63601CA4D1F30070B57C /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		30FC636E1CA514F70070B57C /* AudioPlayTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayTool.h; sourceTree = "<group>"; };
+		30FC636F1CA514F70070B57C /* AudioPlayTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -524,8 +569,10 @@
 				09847C2C1CA3C13E00FECF1F /* libEaseMobClientSDK.a in Frameworks */,
 				3017F7A41CA0F73700A7B3CF /* libxml2.tbd in Frameworks */,
 				3017F7A21CA0F72B00A7B3CF /* libresolv.tbd in Frameworks */,
+				30FC636B1CA4D1F30070B57C /* libopencore-amrnb.a in Frameworks */,
 				3017F7A01CA0F71F00A7B3CF /* libiconv.tbd in Frameworks */,
 				3017F79E1CA0F70600A7B3CF /* libz.tbd in Frameworks */,
+				30FC636C1CA4D1F30070B57C /* libopencore-amrwb.a in Frameworks */,
 				3017F79C1CA0F6F800A7B3CF /* libstdc++.6.0.9.tbd in Frameworks */,
 				3017F79A1CA0F6EC00A7B3CF /* libsqlite3.tbd in Frameworks */,
 				3017F7981CA0F5F200A7B3CF /* CFNetwork.framework in Frameworks */,
@@ -596,6 +643,7 @@
 		09AAB39F1C9B8F44007AE732 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				30FC636D1CA514B90070B57C /* Tool */,
 				30B0232B1CA222EE0073C76D /* View */,
 				09AAB3A51C9B8FC0007AE732 /* Public.pch */,
 				09AAD0E21C9BEB46007AE732 /* Mine.plist */,
@@ -824,6 +872,8 @@
 		09AAD1071C9C2018007AE732 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				30FC633C1CA4D1F30070B57C /* DeviceUtil */,
+				30FC63511CA4D1F30070B57C /* VoiceConvert */,
 				30935E0B1CA28A9F0087DCB7 /* SDAutoLayout */,
 				3017F8391CA13F2300A7B3CF /* NSString+Valid.h */,
 				3017F83A1CA13F2300A7B3CF /* NSString+Valid.m */,
@@ -1281,6 +1331,99 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		30FC633C1CA4D1F30070B57C /* DeviceUtil */ = {
+			isa = PBXGroup;
+			children = (
+				30FC633D1CA4D1F30070B57C /* delegates */,
+				30FC63401CA4D1F30070B57C /* internal */,
+			);
+			path = DeviceUtil;
+			sourceTree = "<group>";
+		};
+		30FC633D1CA4D1F30070B57C /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				30FC633E1CA4D1F30070B57C /* EMCDDeviceManagerDelegate.h */,
+				30FC633F1CA4D1F30070B57C /* EMCDDeviceManagerProximitySensorDelegate.h */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		30FC63401CA4D1F30070B57C /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				30FC63411CA4D1F30070B57C /* DemoErrorCode.h */,
+				30FC63421CA4D1F30070B57C /* EMAudioPlayerUtil.h */,
+				30FC63431CA4D1F30070B57C /* EMAudioPlayerUtil.m */,
+				30FC63441CA4D1F30070B57C /* EMAudioRecorderUtil.h */,
+				30FC63451CA4D1F30070B57C /* EMAudioRecorderUtil.m */,
+				30FC63461CA4D1F30070B57C /* EMCDDeviceManager+Media.h */,
+				30FC63471CA4D1F30070B57C /* EMCDDeviceManager+Media.m */,
+				30FC63481CA4D1F30070B57C /* EMCDDeviceManager+Microphone.h */,
+				30FC63491CA4D1F30070B57C /* EMCDDeviceManager+Microphone.m */,
+				30FC634A1CA4D1F30070B57C /* EMCDDeviceManager+ProximitySensor.h */,
+				30FC634B1CA4D1F30070B57C /* EMCDDeviceManager+ProximitySensor.m */,
+				30FC634C1CA4D1F30070B57C /* EMCDDeviceManager+Remind.h */,
+				30FC634D1CA4D1F30070B57C /* EMCDDeviceManager+Remind.m */,
+				30FC634E1CA4D1F30070B57C /* EMCDDeviceManager.h */,
+				30FC634F1CA4D1F30070B57C /* EMCDDeviceManagerBase.h */,
+				30FC63501CA4D1F30070B57C /* EMCDDeviceManagerBase.m */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		30FC63511CA4D1F30070B57C /* VoiceConvert */ = {
+			isa = PBXGroup;
+			children = (
+				30FC63521CA4D1F30070B57C /* amrwapper */,
+				30FC63571CA4D1F30070B57C /* EMVoiceConverter.h */,
+				30FC63581CA4D1F30070B57C /* EMVoiceConverter.mm */,
+				30FC63591CA4D1F30070B57C /* opencore-amrnb */,
+				30FC635D1CA4D1F30070B57C /* opencore-amrwb */,
+			);
+			path = VoiceConvert;
+			sourceTree = "<group>";
+		};
+		30FC63521CA4D1F30070B57C /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				30FC63531CA4D1F30070B57C /* amrFileCodec.h */,
+				30FC63541CA4D1F30070B57C /* amrFileCodec.mm */,
+				30FC63551CA4D1F30070B57C /* wav.h */,
+				30FC63561CA4D1F30070B57C /* wav.mm */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		30FC63591CA4D1F30070B57C /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				30FC635A1CA4D1F30070B57C /* interf_dec.h */,
+				30FC635B1CA4D1F30070B57C /* interf_enc.h */,
+				30FC635C1CA4D1F30070B57C /* libopencore-amrnb.a */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		30FC635D1CA4D1F30070B57C /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				30FC635E1CA4D1F30070B57C /* dec_if.h */,
+				30FC635F1CA4D1F30070B57C /* if_rom.h */,
+				30FC63601CA4D1F30070B57C /* libopencore-amrwb.a */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		30FC636D1CA514B90070B57C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				30FC636E1CA514F70070B57C /* AudioPlayTool.h */,
+				30FC636F1CA514F70070B57C /* AudioPlayTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1515,6 +1658,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FC63651CA4D1F30070B57C /* EMCDDeviceManager+ProximitySensor.m in Sources */,
+				30FC63621CA4D1F30070B57C /* EMAudioRecorderUtil.m in Sources */,
 				09AAD1051C9BFA5E007AE732 /* AddViewController.m in Sources */,
 				09AAD0E61C9BEB8A007AE732 /* MineTableViewController.m in Sources */,
 				09AAD10A1C9C205F007AE732 /* LoginViewController.m in Sources */,
@@ -1525,10 +1670,17 @@
 				30B0232E1CA2232C0073C76D /* NoInternetHeadView.m in Sources */,
 				30935E101CA28A9F0087DCB7 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				09B1EC9A1C9FE4CA001E4808 /* UIImage+ImageEffects.m in Sources */,
+				30FC63631CA4D1F30070B57C /* EMCDDeviceManager+Media.m in Sources */,
+				30FC636A1CA4D1F30070B57C /* EMVoiceConverter.mm in Sources */,
 				30F0F9111CA4384E009792D4 /* CharViewController.m in Sources */,
 				30B023331CA22F6D0073C76D /* MessageTableViewController.m in Sources */,
+				30FC63671CA4D1F30070B57C /* EMCDDeviceManagerBase.m in Sources */,
 				09B1ECC01CA01B2F001E4808 /* RegiestViewController.m in Sources */,
+				30FC63661CA4D1F30070B57C /* EMCDDeviceManager+Remind.m in Sources */,
+				30FC63641CA4D1F30070B57C /* EMCDDeviceManager+Microphone.m in Sources */,
+				30FC63611CA4D1F30070B57C /* EMAudioPlayerUtil.m in Sources */,
 				30935E1A1CA29A020087DCB7 /* AddFriendTableViewCell.m in Sources */,
+				30FC63701CA514F70070B57C /* AudioPlayTool.m in Sources */,
 				30935E141CA2907F0087DCB7 /* AddFriendViewTableViewController.m in Sources */,
 				30935E171CA297D10087DCB7 /* AddFriendHeadView.m in Sources */,
 				09AAD0EB1C9BEBDD007AE732 /* RequestMine.m in Sources */,
@@ -1536,8 +1688,10 @@
 				09AAB3871C9B8DEF007AE732 /* main.m in Sources */,
 				09AAD1101C9C222D007AE732 /* PublicViewController.m in Sources */,
 				30935BC61CA27D270087DCB7 /* AddRessBookTableViewController.m in Sources */,
+				30FC63691CA4D1F30070B57C /* wav.mm in Sources */,
 				30F0F9151CA438E7009792D4 /* ChatCell.m in Sources */,
 				09847C411CA3FC6600FECF1F /* AddressBookTableViewCell.m in Sources */,
+				30FC63681CA4D1F30070B57C /* amrFileCodec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1648,6 +1802,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShiGuangShuo/FrameWork/EaseMobSDK/lib",
 					"$(PROJECT_DIR)/ShiGuangShuo/FrameWork/Lib/EaseMobSDK/lib",
+					"$(PROJECT_DIR)/ShiGuangShuo/FrameWork/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/ShiGuangShuo/FrameWork/VoiceConvert/opencore-amrwb",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Fuli.ShiGuangShuo;
@@ -1668,6 +1824,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShiGuangShuo/FrameWork/EaseMobSDK/lib",
 					"$(PROJECT_DIR)/ShiGuangShuo/FrameWork/Lib/EaseMobSDK/lib",
+					"$(PROJECT_DIR)/ShiGuangShuo/FrameWork/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/ShiGuangShuo/FrameWork/VoiceConvert/opencore-amrwb",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Fuli.ShiGuangShuo;

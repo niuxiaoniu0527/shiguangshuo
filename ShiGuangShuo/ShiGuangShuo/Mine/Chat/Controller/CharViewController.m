@@ -7,6 +7,7 @@
 //
 
 #import "CharViewController.h"
+#import "EMCDDeviceManager.h"
 #import "ChatCell.h"
 
 @interface CharViewController ()<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,EMChatManagerDelegate>
@@ -23,6 +24,8 @@
 //inputToolBar高度的约束
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *inputViewBottomConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewBottom;
+@property (weak, nonatomic) IBOutlet UIButton *recordBtn;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -181,6 +184,27 @@
     //把消息滚动显示到最前面
     [self scrollToBottom];
 }
+
+#pragma mark ------------- 发送语音
+- (void)sendVoice:(NSString *)recordPath duration:(NSInteger)duration{
+    //构造一个语音的消息体
+    EMChatVoice *charVoice = [[EMChatVoice alloc] initWithFile:recordPath displayName:@"语音"];
+    EMVoiceMessageBody *voiceMsg = [[EMVoiceMessageBody alloc] initWithChatObject:charVoice];
+    voiceMsg.duration = duration;
+    //创建消息对象
+    EMMessage *msgObj = [[EMMessage alloc] initWithReceiver:self.buddy.username bodies:@[voiceMsg]];
+    [[EaseMob sharedInstance].chatManager asyncSendMessage:msgObj progress:nil prepare:^(EMMessage *message, EMError *error) {
+        NSLog(@"准备发送消息");
+    } onQueue:nil completion:^(EMMessage *message, EMError *error) {
+        NSLog(@"完成消息发送");
+    } onQueue:nil];
+    //3.把消息添加到数据源
+    [self.dataSoure addObject:msgObj];
+    [self.tableView reloadData];
+    //把消息滚动显示到最前面
+    [self scrollToBottom];
+}
+
 #pragma mark ------------接受好友回复消息
 - (void)didReceiveMessage:(EMMessage *)message{
     //经行判断from一定要等于当前聊天用户
@@ -219,5 +243,46 @@
     
 }
 
+#pragma mark --------- Action
+//点击录音btn切换输入框样式
+- (IBAction)voiceAction:(UIButton *)sender {
+    self.recordBtn.hidden = !self.recordBtn.hidden;
+    if (self.recordBtn.hidden == NO) {
+        self.inputViewBottomConstraint.constant = 46;
+        [self.view endEditing:YES];
+    }else{
+        //显示键盘
+        [self.textView becomeFirstResponder];
+        [self textViewDidChange:self.textView];
+    }
+}
+#pragma mark --------------按钮点下去开始录音
+- (IBAction)beginRecordAction:(id)sender {
+    //文件名以时间命名
+    int x = arc4random() % 100000;
+    NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
+    NSString *fileName = [NSString stringWithFormat:@"%d%d",(int)time,x];
+    
+    [[EMCDDeviceManager sharedInstance] asyncStartRecordingWithFileName:fileName completion:^(NSError *error) {
+        if (!error) {
+            //  NSLog(@"开始录音成功");
+        }
+    }];
+}
+#pragma mark --------------手指在按钮范围内抬起结束录音
+- (IBAction)endRecordAction:(id)sender {
+    __weak typeof(self) weakSelf = self;
+    [[EMCDDeviceManager sharedInstance] asyncStopRecordingWithCompletion:^(NSString *recordPath, NSInteger aDuration, NSError *error) {
+        if (!error) {
+            // NSLog(@"录音成功");
+            //发送语音给服务器
+            [weakSelf sendVoice:recordPath duration:aDuration];
+        }
+    }];
+}
+#pragma mark --------------手指在按钮的外面取消发送
+- (IBAction)cancelRecordAction:(id)sender {
+    [[EMCDDeviceManager sharedInstance] cancelCurrentRecording];
+}
 
 @end
