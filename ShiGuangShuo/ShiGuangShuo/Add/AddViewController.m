@@ -45,8 +45,10 @@
     [self.view addSubview:self.statusTextView];
     
     self.addImageBtn = [[UIButton alloc]initWithFrame:CGRectMake(120, 250, 150, 250)];
+    self.addImageBtn.backgroundColor = [UIColor grayColor];
+    self.addImageBtn.alpha = 0.6;
     [self.addImageBtn setTitle:@"点我添加图片" forState:UIControlStateNormal];
-    [self.addImageBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [self.addImageBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.view addSubview:self.addImageBtn];
     [self.addImageBtn addTarget:self action:@selector(addImageBtnAction:) forControlEvents:UIControlEventTouchUpInside];
 }
