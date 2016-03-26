@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //初始化LeanClound
+    [AVOSCloud setApplicationId:@"bEvIqjK4kHMQ2pgCaduXPQUi-gzGzoHsz" clientKey:@"MBgllDQkWMWmRREuKzKJp6EL"];
+    
     //registerSDKWithAppKey:注册的appKey，详细见下面注释。
     //apnsCertName:推送证书名(不需要加后缀)，详细见下面注释。
     //1.初始化SDK,并隐藏环信SDK的日志输出
