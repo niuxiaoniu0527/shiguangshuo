@@ -2066,12 +2066,11 @@
 				28FB778E1CA5629500E173CA /* SDWebImageDownloaderOperation.m in Sources */,
 				28FB77771CA5629500E173CA /* MJRefreshComponent.m in Sources */,
 				30935E1A1CA29A020087DCB7 /* AddFriendTableViewCell.m in Sources */,
-<<<<<<< HEAD
+
 				30FC63A21CA5836E0070B57C /* TimeTool.m in Sources */,
-=======
+
 				28FB76F71CA55DF900E173CA /* ShowBigImageVC.m in Sources */,
 				28FB778F1CA5629500E173CA /* SDWebImageManager.m in Sources */,
->>>>>>> 78a45b16d71c22d2f6bb68425bb31d191117d608
 				30FC63701CA514F70070B57C /* AudioPlayTool.m in Sources */,
 				30935E141CA2907F0087DCB7 /* AddFriendViewTableViewController.m in Sources */,
 				28FB77951CA5629500E173CA /* UIImage+WebP.m in Sources */,
@@ -2093,11 +2092,8 @@
 				09847C411CA3FC6600FECF1F /* AddressBookTableViewCell.m in Sources */,
 				28FB778B1CA5629500E173CA /* SDWebImageCompat.m in Sources */,
 				30FC63681CA4D1F30070B57C /* amrFileCodec.mm in Sources */,
-<<<<<<< HEAD
 				30FC639F1CA57FA80070B57C /* TiemCell.m in Sources */,
-=======
 				28FB76FB1CA55DF900E173CA /* CustomCell.m in Sources */,
->>>>>>> 78a45b16d71c22d2f6bb68425bb31d191117d608
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
