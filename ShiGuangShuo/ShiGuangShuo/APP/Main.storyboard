@@ -295,6 +295,9 @@
                                             <constraint firstAttribute="width" constant="30" id="XzG-PJ-ved"/>
                                         </constraints>
                                         <state key="normal" image="chatBar_more@2x.png"/>
+                                        <connections>
+                                            <action selector="showImagePickerAction:" destination="bdA-As-1zx" eventType="touchUpInside" id="YbU-Ic-Q9h"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fAi-pe-JLy">
                                         <rect key="frame" x="60" y="6" width="435" height="33"/>
@@ -357,7 +360,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wPn-H8-vMl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wPn-H8-vMl">
                                 <rect key="frame" x="0.0" y="64" width="600" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -365,7 +368,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5qp-4Y-UT7" id="BhK-xN-Oql">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatListCellHead@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="HRW-c2-xhg">
@@ -386,6 +389,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="HRW-c2-xhg" firstAttribute="top" secondItem="BhK-xN-Oql" secondAttribute="top" constant="5" id="4VV-0U-W6E"/>
                                                 <constraint firstItem="HRW-c2-xhg" firstAttribute="leading" secondItem="BhK-xN-Oql" secondAttribute="leading" constant="5" id="AuP-YV-AHr"/>
@@ -397,6 +401,7 @@
                                                 <constraint firstItem="Ybl-uV-ypY" firstAttribute="trailing" secondItem="1Wz-gu-n3R" secondAttribute="trailing" constant="-10" id="xTQ-o2-5TX"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="messageLabel" destination="Ybl-uV-ypY" id="m8F-mL-qkC"/>
                                         </connections>
@@ -405,7 +410,7 @@
                                         <rect key="frame" x="0.0" y="128" width="600" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V9w-gU-0Ox" id="Dd7-2B-OBn">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="121.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="122"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatListCellHead@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="JF3-Df-gs7">
@@ -437,8 +442,33 @@
                                                 <constraint firstItem="JF3-Df-gs7" firstAttribute="leading" secondItem="Hq8-mg-ylz" secondAttribute="trailing" constant="20" id="o5d-f3-n4F"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="messageLabel" destination="Hq8-mg-ylz" id="pkT-nO-QWK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeCell" rowHeight="23" id="74d-ea-JIA" customClass="TiemCell">
+                                        <rect key="frame" x="0.0" y="250" width="600" height="23"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="74d-ea-JIA" id="doa-tx-g2f">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="23"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J02-2z-960">
+                                                    <rect key="frame" x="283.5" y="3.5" width="33" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="J02-2z-960" firstAttribute="centerY" secondItem="doa-tx-g2f" secondAttribute="centerY" id="L5w-mi-Ujy"/>
+                                                <constraint firstItem="J02-2z-960" firstAttribute="centerX" secondItem="doa-tx-g2f" secondAttribute="centerX" id="Zml-n7-c2Y"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="timeLabel" destination="J02-2z-960" id="X03-5q-Gtw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

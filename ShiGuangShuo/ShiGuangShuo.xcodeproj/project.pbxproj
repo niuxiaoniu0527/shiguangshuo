@@ -218,6 +218,8 @@
 		30FC636B1CA4D1F30070B57C /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FC635C1CA4D1F30070B57C /* libopencore-amrnb.a */; };
 		30FC636C1CA4D1F30070B57C /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FC63601CA4D1F30070B57C /* libopencore-amrwb.a */; };
 		30FC63701CA514F70070B57C /* AudioPlayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC636F1CA514F70070B57C /* AudioPlayTool.m */; };
+		30FC639F1CA57FA80070B57C /* TiemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC639E1CA57FA80070B57C /* TiemCell.m */; };
+		30FC63A21CA5836E0070B57C /* TimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FC63A11CA5836E0070B57C /* TimeTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -559,6 +561,10 @@
 		30FC63601CA4D1F30070B57C /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		30FC636E1CA514F70070B57C /* AudioPlayTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayTool.h; sourceTree = "<group>"; };
 		30FC636F1CA514F70070B57C /* AudioPlayTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayTool.m; sourceTree = "<group>"; };
+		30FC639D1CA57FA80070B57C /* TiemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiemCell.h; sourceTree = "<group>"; };
+		30FC639E1CA57FA80070B57C /* TiemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiemCell.m; sourceTree = "<group>"; };
+		30FC63A01CA5836E0070B57C /* TimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTool.h; sourceTree = "<group>"; };
+		30FC63A11CA5836E0070B57C /* TimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1327,6 +1333,8 @@
 			children = (
 				30F0F9131CA438E7009792D4 /* ChatCell.h */,
 				30F0F9141CA438E7009792D4 /* ChatCell.m */,
+				30FC639D1CA57FA80070B57C /* TiemCell.h */,
+				30FC639E1CA57FA80070B57C /* TiemCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1420,6 +1428,8 @@
 			children = (
 				30FC636E1CA514F70070B57C /* AudioPlayTool.h */,
 				30FC636F1CA514F70070B57C /* AudioPlayTool.m */,
+				30FC63A01CA5836E0070B57C /* TimeTool.h */,
+				30FC63A11CA5836E0070B57C /* TimeTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1680,6 +1690,7 @@
 				30FC63641CA4D1F30070B57C /* EMCDDeviceManager+Microphone.m in Sources */,
 				30FC63611CA4D1F30070B57C /* EMAudioPlayerUtil.m in Sources */,
 				30935E1A1CA29A020087DCB7 /* AddFriendTableViewCell.m in Sources */,
+				30FC63A21CA5836E0070B57C /* TimeTool.m in Sources */,
 				30FC63701CA514F70070B57C /* AudioPlayTool.m in Sources */,
 				30935E141CA2907F0087DCB7 /* AddFriendViewTableViewController.m in Sources */,
 				30935E171CA297D10087DCB7 /* AddFriendHeadView.m in Sources */,
@@ -1692,6 +1703,7 @@
 				30F0F9151CA438E7009792D4 /* ChatCell.m in Sources */,
 				09847C411CA3FC6600FECF1F /* AddressBookTableViewCell.m in Sources */,
 				30FC63681CA4D1F30070B57C /* amrFileCodec.mm in Sources */,
+				30FC639F1CA57FA80070B57C /* TiemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

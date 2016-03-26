@@ -9,8 +9,11 @@
 #import "CharViewController.h"
 #import "EMCDDeviceManager.h"
 #import "ChatCell.h"
+#import "AudioPlayTool.h"
+#import "TiemCell.h"
+#import "TimeTool.h"
 
-@interface CharViewController ()<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,EMChatManagerDelegate>
+@interface CharViewController ()<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,EMChatManagerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 //聊天输入框底部的约束
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *charBottomConstraint;
@@ -23,10 +26,13 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //inputToolBar高度的约束
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *inputViewBottomConstraint;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewBottom;
 @property (weak, nonatomic) IBOutlet UIButton *recordBtn;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
+//当前添加的时间
+@property (nonatomic,copy) NSString *currentTime;
 @end
 
 @implementation CharViewController
@@ -49,6 +55,7 @@
     
     NSString *buddyName = self.buddy.username;
     self.navigationItem.title = [NSString stringWithFormat:@"与%@交谈中...",buddyName];
+    self.tableView.backgroundColor = [UIColor colorWithRed:246 / 255.0 green:246 / 255.0 blue:246 / 255.0 alpha:1];
     
     //加载本地数据内容
     [self loadLocalChatMessage];
@@ -95,6 +102,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ChatCell *cell = nil;
+    //判断数据源类型
+    if ([self.dataSoure[indexPath.row] isKindOfClass:[NSString class]]) {
+        TiemCell *timeCell = [tableView dequeueReusableCellWithIdentifier:@"TimeCell"];
+        timeCell.timeLabel.text = self.dataSoure[indexPath.row];
+        return timeCell;
+    }
+    
     //1.先获取消息模型
     EMMessage *message = self.dataSoure[indexPath.row];
     if ([message.from isEqualToString:self.buddy.username]) {//接收方
@@ -108,6 +122,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //时间的cell高度
+    if ([self.dataSoure[indexPath.row] isKindOfClass:[NSString class]]) {
+        return 23;
+    }
+    
     //1.获取消息模型
     EMMessage *message = self.dataSoure[indexPath.row];
     self.chatCellTool.message = message;
@@ -169,20 +189,8 @@
     EMChatText *chatText = [[EMChatText alloc] initWithText:text];
     //创建文本消息体
     EMTextMessageBody *textBody = [[EMTextMessageBody alloc] initWithChatObject:chatText];
-    //创建消息对象
-    EMMessage *msgObj = [[EMMessage alloc] initWithReceiver:self.buddy.username bodies:@[textBody]];
     
-    
-    [[EaseMob sharedInstance].chatManager asyncSendMessage:msgObj progress:nil prepare:^(EMMessage *message, EMError *error) {
-        NSLog(@"准备发送消息");
-    } onQueue:nil completion:^(EMMessage *message, EMError *error) {
-        NSLog(@"完成消息发送");
-    } onQueue:nil];
-    //3.把消息添加到数据源
-    [self.dataSoure addObject:msgObj];
-    [self.tableView reloadData];
-    //把消息滚动显示到最前面
-    [self scrollToBottom];
+    [self sendMessage:textBody];
 }
 
 #pragma mark ------------- 发送语音
@@ -191,18 +199,54 @@
     EMChatVoice *charVoice = [[EMChatVoice alloc] initWithFile:recordPath displayName:@"语音"];
     EMVoiceMessageBody *voiceMsg = [[EMVoiceMessageBody alloc] initWithChatObject:charVoice];
     voiceMsg.duration = duration;
-    //创建消息对象
-    EMMessage *msgObj = [[EMMessage alloc] initWithReceiver:self.buddy.username bodies:@[voiceMsg]];
-    [[EaseMob sharedInstance].chatManager asyncSendMessage:msgObj progress:nil prepare:^(EMMessage *message, EMError *error) {
-        NSLog(@"准备发送消息");
+    [self sendMessage:voiceMsg];
+    
+}
+
+#pragma mark -----------发送图片
+- (void)sendImage:(UIImage *)selectedImg{
+    //构造图片的消息体
+    /*
+     第一个参数 原始大小的参数
+     第二个参数 缩略图对象
+     */
+    EMChatImage *orginalImage = [[EMChatImage alloc] initWithUIImage:selectedImg displayName:@"[图片]"];
+    
+    EMImageMessageBody *imgBody = [[EMImageMessageBody alloc] initWithImage:orginalImage thumbnailImage:nil];
+    
+    [self sendMessage:imgBody];
+}
+#pragma mark ------------发送消息体
+- (void)sendMessage:(id<IEMMessageBody>)body{
+    //构造消息对象
+    EMMessage *messageObj = [[EMMessage alloc] initWithReceiver:self.buddy.username bodies:@[body]];
+    
+    messageObj.messageType = eMessageTypeChat;
+    //发送消息
+    [[EaseMob sharedInstance].chatManager asyncSendMessage:messageObj progress:nil prepare:^(EMMessage *message, EMError *error) {
+        
     } onQueue:nil completion:^(EMMessage *message, EMError *error) {
-        NSLog(@"完成消息发送");
+        NSLog(@"%@",error);
     } onQueue:nil];
-    //3.把消息添加到数据源
-    [self.dataSoure addObject:msgObj];
+    
+    //把消息添加到数据源,然后刷新表格
+    [self addDataSourceWithMessage:messageObj];
     [self.tableView reloadData];
     //把消息滚动显示到最前面
     [self scrollToBottom];
+    
+}
+
+
+
+//把消息滚动显示到最前面
+- (void)scrollToBottom{
+    //获取最好一行
+    if (self.dataSoure.count == 0) {
+        return;
+    }
+    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem:self.dataSoure.count - 1 inSection:0];
+    [self.tableView scrollToRowAtIndexPath:lastIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 #pragma mark ------------接受好友回复消息
@@ -219,17 +263,6 @@
     
 }
 
-
-
-//把消息滚动显示到最前面
-- (void)scrollToBottom{
-    //获取最好一行
-    if (self.dataSoure.count == 0) {
-        return;
-    }
-    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem:self.dataSoure.count - 1 inSection:0];
-    [self.tableView scrollToRowAtIndexPath:lastIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-}
 #pragma mark ---------加载本地数据库
 //获取本地数据库
 - (void)loadLocalChatMessage{
@@ -238,7 +271,7 @@
     //加载与当前好友聊天的所有记录
     NSArray *messages = [conversation loadAllMessages];
     for (EMMessage *messageObj in messages) {
-        [self.dataSoure addObject:messageObj];
+        [self addDataSourceWithMessage:messageObj];
     }
     
 }
@@ -247,6 +280,7 @@
 //点击录音btn切换输入框样式
 - (IBAction)voiceAction:(UIButton *)sender {
     self.recordBtn.hidden = !self.recordBtn.hidden;
+    self.textView.hidden = !self.textView.hidden;
     if (self.recordBtn.hidden == NO) {
         self.inputViewBottomConstraint.constant = 46;
         [self.view endEditing:YES];
@@ -283,6 +317,46 @@
 #pragma mark --------------手指在按钮的外面取消发送
 - (IBAction)cancelRecordAction:(id)sender {
     [[EMCDDeviceManager sharedInstance] cancelCurrentRecording];
+}
+- (IBAction)showImagePickerAction:(id)sender {
+    UIImagePickerController *imagePC = [[UIImagePickerController alloc] init];
+    //设置源
+    imagePC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    //设置代理
+    imagePC.delegate = self;
+    
+    [self presentViewController:imagePC animated:YES completion:nil];
+    
+}
+//用户选中图片的回调
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    //获取用户选中的图片
+    UIImage *selectedImg = info[UIImagePickerControllerOriginalImage];
+    //发送图片
+    [self sendImage:selectedImg];
+    //隐藏当前图片选中控制器
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark ---------开始拖拽
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    //停止语音播放
+    [AudioPlayTool stop];
+}
+
+- (void)addDataSourceWithMessage:(EMMessage *)message{
+    //判断EMMessage对象前面用不用加时间
+    NSString *timeStr = [TimeTool timeStr:message.timestamp];
+    
+    if (![self.currentTime isEqualToString:timeStr]) {
+        [self.dataSoure addObject:timeStr];
+        self.currentTime = timeStr;
+    }
+    //添加message对象
+    [self.dataSoure addObject:message];
+    
+    //设置消息为已读
+  //  [self.conversation markMessageWithId:message.messageId asRead:YES];
 }
 
 @end

@@ -12,4 +12,5 @@
 
 + (void)playWithMessage:(EMMessage *)message messageLable:(UILabel *)messageLable receiver:(BOOL)receiver;
 
++ (void)stop;
 @end

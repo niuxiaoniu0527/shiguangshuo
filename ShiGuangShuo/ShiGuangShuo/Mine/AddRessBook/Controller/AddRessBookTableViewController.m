@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     //获取好友列表
     self.buddyList = [[EaseMob sharedInstance].chatManager buddyList];
     //设置的代理
